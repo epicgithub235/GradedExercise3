@@ -6,27 +6,29 @@
     <title>Document</title>
     <script>
         function random(){
-            let num = Math.random() * 1000;
-            num = Math.floor(num)
-            var one = num%10;
+            let date = new Date()
+            let num = Math.floor(Math.random() * 1000)
 
-          var ten = num
+            let one = num%10;
+
+            let ten = num
             ten = ten/10;
             ten = Math.floor(ten)
             ten = ten%10 * 10; 
 
-            var hundred = num;
+            let hundred = num;
             hundred = hundred/100;
             hundred = Math.floor(hundred)
             hundred = hundred%10 * 100;
 
-            var thousand = num;
+            let thousand = num;
             thousand = thousand/1000;
             thousand = Math.floor(thousand)
         
-            var a = 'Randomly generated number: ' + num + '\n';
-            var b = 'Breakdown: ' + thousand + ', ' + hundred + ', ' + ten + ', ' + one;
-            alert(a+b)
+            let a = 'Randomly generated number: ' + num + '\n';
+            let b = 'Breakdown: ' + thousand + ', ' + hundred + ', ' + ten + ', ' + one + '\n';
+            let c = 'Generated on ' + date
+            alert(a+b+c)
         }
         random()
     </script>
